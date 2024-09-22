@@ -187,7 +187,7 @@ const Page: React.FC = () => {
   
     const handleBookNow = (room: Room, e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
       // Logic to handle booking
-      console.log("Booking room:", room.title);
+      console.log("Booking room:",<RoomDetail /> );
     };
   
     return (
@@ -196,7 +196,7 @@ const Page: React.FC = () => {
               <h2 className="text-2xl font-semibold mb-6">Select a Room</h2>
                  <div className="grid gap-6">
                   {rooms.map((room, index) => (
-                    <Link href={`/room-details/${room.title}`} key={index} passHref>
+                    <Link href={`/RoomDetail`} key={index} passHref>
                       <div
                         className="bg-white gap-8 rounded-lg shadow-lg p-6 flex cursor-pointer"
                       >
