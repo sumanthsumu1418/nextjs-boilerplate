@@ -1,8 +1,8 @@
 import React from "react";
 import Image from "next/image";
-import Resort1 from '../components/resort1.jpeg'
-import Resort2 from '../components/resort2.jpeg'
-import Resort4 from '../components/resort4.jpeg'
+import Resort1 from '../components/images/resort1.jpeg'
+import Resort2 from '../components/images/resort2.jpeg'
+import Resort4 from '../components/images/resort4.jpeg'
 const Services = () => {
   const services = [
     {

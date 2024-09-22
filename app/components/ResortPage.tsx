@@ -1,11 +1,11 @@
 /* eslint-disable react/no-unescaped-entities */
 import React from "react";
 import Image from "next/image";
-import Resort from "./resort.jpeg";
-import Resort1 from "./resort1.jpeg";
-import Resort2 from "./resort2.jpeg";
-import Resort3 from "./resort3.jpeg";
-import Resort4 from "./resort4.jpeg";
+import Resort from "./images/resort.jpeg";
+import Resort1 from "./images/resort1.jpeg";
+import Resort2 from "./images/resort2.jpeg";
+import Resort3 from "./images/resort3.jpeg";
+import Resort4 from "./images/resort4.jpeg";
 import Button from "./Button";
 
 const LuxuryLivingSection = () => {

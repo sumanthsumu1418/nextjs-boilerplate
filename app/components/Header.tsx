@@ -1,8 +1,8 @@
 'use client';
 import React from "react";
 import Image from "next/image";
-import logo from './logo.png';
-import menu from './menu.png';
+import logo from './images/logo.png';
+import menu from './images/menu.png';
 import Link from "next/link";
 const Header = () => {
   return (
