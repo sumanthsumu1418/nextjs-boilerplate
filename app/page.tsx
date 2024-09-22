@@ -1,6 +1,13 @@
+import Footer from "./components/Footer";
+import Header from "./components/Header";
+import Resortpage from "./components/ResortPage";
 
 export default function Home() {
   return (
-   <h2>hello world!</h2>
+    <>
+   <Header/>
+   <Resortpage/>
+   <Footer/>
+   </>
   );
 }
