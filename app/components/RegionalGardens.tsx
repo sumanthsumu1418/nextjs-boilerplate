@@ -53,9 +53,7 @@ const RegionalHighlights = () => {
                 className="rounded-lg transition-transform duration-500 transform group-hover:scale-[2]"
               />
             </div>
-            {/* {highlight.isCenter && (
-              <div className="absolute left-0 right-0 bottom-0 h-1 bg-black mt-8" />
-            )} */}
+           
             <h3 className="mt-4 text-lg font-semibold text-gray-800">
               {highlight.title}
             </h3>

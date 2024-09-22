@@ -75,6 +75,7 @@ const Resort = () => {
                     <span className="inline-block mr-1">⏰</span>{option.hours}
                   </p>
                 </div>
+                
                 <button className="bg-green-800 text-white py-2 px-4 rounded hover:bg-green-700">
                   View Details
                 </button>

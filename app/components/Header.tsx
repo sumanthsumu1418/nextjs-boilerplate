@@ -6,14 +6,13 @@ import menu from "./images/menu.png";
 import Link from "next/link";
 import { usePathname } from "next/navigation"; // Correct hook for App Router
 
-
 const Header = () => {
   const pathname = usePathname(); // Get the current path
   const navLinks = [
     { href: "/Resort", label: "The Resort" },
     { href: "/Accomodation", label: "Accommodations" },
     { href: "/Services", label: "Services", isButton: true },
-    { href: "/ContactUs", label: "Contact Us" }
+    { href: "/ContactUs", label: "Contact Us" },
   ];
   return (
     <nav className="bg-cream  px-[5%] shadow-md">
@@ -46,10 +45,11 @@ const Header = () => {
             <select className="border border-gray-300 p-2 rounded">
               <option value="eng">ENG</option>
             </select>
-
-            <button className="border border-green-800 px-4 py-2 rounded text-green-800 hover:bg-green-800 hover:text-white transition">
-              Book a Tour
-            </button>
+            <Link href="/Booking">
+              <button className="border border-green-800 px-4 py-2 rounded text-green-800 hover:bg-green-800 hover:text-white transition">
+                Book a Resort
+              </button>
+            </Link>
           </div>
         </div>
 
@@ -60,9 +60,7 @@ const Header = () => {
               <Link href={link.href} key={link.label}>
                 <button
                   className={`text-gray-700  hover:text-green-800 ${
-                    pathname === link.href
-                      ? "border-b-2 border-green-800"
-                      : ""
+                    pathname === link.href ? "border-b-2 border-green-800" : ""
                   }`}
                 >
                   {link.label}
@@ -73,9 +71,7 @@ const Header = () => {
                 href={link.href}
                 key={link.label}
                 className={`text-gray-700 hover:text-green-800 ${
-                  pathname === link.href
-                    ? "border-b-2 border-green-800"
-                    : ""
+                  pathname === link.href ? "border-b-2 border-green-800" : ""
                 }`}
               >
                 {link.label}
