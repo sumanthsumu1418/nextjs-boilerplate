@@ -34,7 +34,7 @@ const RegionalHighlights = () => {
           authentic cultural experience in Vietnam.
         </p>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+      <div className="grid grid-cols-1 justify-center items-center md:grid-cols-3 gap-8 mb-8">
         {highlights.map((highlight) => (
           <div
             key={highlight.title}
@@ -53,9 +53,9 @@ const RegionalHighlights = () => {
                 className="rounded-lg transition-transform duration-500 transform group-hover:scale-[2]"
               />
             </div>
-            {highlight.isCenter && (
+            {/* {highlight.isCenter && (
               <div className="absolute left-0 right-0 bottom-0 h-1 bg-black mt-8" />
-            )}
+            )} */}
             <h3 className="mt-4 text-lg font-semibold text-gray-800">
               {highlight.title}
             </h3>

@@ -7,12 +7,11 @@ import Link from "next/link";
 import { usePathname } from "next/navigation"; // Correct hook for App Router
 
 
-
 const Header = () => {
   const pathname = usePathname(); // Get the current path
   const navLinks = [
     { href: "/Resort", label: "The Resort" },
-    { href: "/Accommodations", label: "Accommodations" },
+    { href: "/Accomodation", label: "Accommodations" },
     { href: "/Services", label: "Services", isButton: true },
     { href: "/ContactUs", label: "Contact Us" }
   ];
