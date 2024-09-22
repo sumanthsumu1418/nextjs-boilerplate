@@ -3,7 +3,7 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import RoomDetail from "../RoomDetail/page"
+import RoomDetail from "../RoomDetail/page";
 
 const Page: React.FC = () => {
     return (
@@ -182,10 +182,10 @@ const Page: React.FC = () => {
   
     const navigateToRoomDetails = (room: Room) => {
       // Logic to navigate to room details (for example, using router.push('/room-details'))
-      console.log("Navigating to room details for:",<RoomDetails />);
+      console.log("Navigating to room details for:",<RoomDetail />);
     };
   
-    const handleBookNow = (room: Room) => {
+    const handleBookNow = (room: Room, e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
       // Logic to handle booking
       console.log("Booking room:", room.title);
     };
