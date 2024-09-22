@@ -16,7 +16,9 @@ const LuxuryLivingSection = () => {
   useEffect(() => {
     const playVideo = () => {
       if (videoRef.current) {
+        //@ts-expect-error
         videoRef.current.muted = isMuted; // Set initial mute state
+        //@ts-expect-error
         const playPromise = videoRef.current.play();
 
         if (playPromise !== undefined) {
@@ -24,6 +26,7 @@ const LuxuryLivingSection = () => {
             .then(() => {
               console.log("Video is playing.");
             })
+            //@ts-expect-error
             .catch((error) => {
               console.log("Autoplay prevented: " + error);
             });
