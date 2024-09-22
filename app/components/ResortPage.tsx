@@ -1,18 +1,67 @@
+"use client";
+
 /* eslint-disable react/no-unescaped-entities */
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import Resort from "./images/resort.jpeg";
 import Resort1 from "./images/resort1.jpeg";
 import Resort2 from "./images/resort2.jpeg";
-import Resort3 from "./images/resort3.jpeg";
-import Resort4 from "./images/resort4.jpeg";
 import Button from "./Button";
 import Accommodations from "../Accomodation/page";
 
 const LuxuryLivingSection = () => {
+  const videoRef = useRef(null);
+  const [isMuted, setIsMuted] = useState(true); // State to handle mute/unmute
+
+  useEffect(() => {
+    const playVideo = () => {
+      if (videoRef.current) {
+        videoRef.current.muted = isMuted; // Set initial mute state
+        const playPromise = videoRef.current.play();
+
+        if (playPromise !== undefined) {
+          playPromise
+            .then(() => {
+              console.log("Video is playing.");
+            })
+            .catch((error) => {
+              console.log("Autoplay prevented: " + error);
+            });
+        }
+      }
+    };
+
+    playVideo();
+  }, [isMuted]); // Re-run if mute state changes
+
+  const toggleMute = () => {
+    setIsMuted(!isMuted);
+  };
+
   return (
-    <section className="bg-[#F5F0E5]  py-12  px-[6%]">
-      <div className="grid md:grid-cols-2 gap-8">
+    <section className="bg-[#F5F0E5] px-[6%] py-12">
+      <div className="relative">
+        <video
+          ref={videoRef}
+          className="w-full h-auto rounded-lg shadow-lg"
+          loop
+          playsInline
+          muted={isMuted} // Ensure the video is muted by default
+          autoPlay // Enable autoplay by default
+          src="/videos/video.mp4"
+        >
+          Your browser does not support the video tag.
+        </video>
+        
+        {/* Transparent Mute/Unmute Button */}
+        <button
+          onClick={toggleMute}
+          className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-black bg-opacity-50 text-white px-4 py-2 rounded-full"
+        >
+          {isMuted ? "Unmute" : "Mute"}
+        </button>
+      </div>
+      <div className="grid md:grid-cols-2 gap-8 mt-8">
         <div className="relative">
           <Image
             src={Resort}
@@ -41,11 +90,7 @@ const LuxuryLivingSection = () => {
             colorful flowers. The rooms are spacious and furnished with modern
             amenities.
           </p>
-          <Button
-            text="Read More"
-            className="w-[35%]"
-            additionalStyles={undefined}
-          />
+          <Button text="Read More" className="w-[35%]" additionalStyles={undefined} />
         </div>
       </div>
     </section>
@@ -65,11 +110,7 @@ const GrandOpeningOfferSection = () => {
             10% savings on your stay and additional perks, such as complimentary
             breakfast and spa treatments.
           </p>
-          <Button
-            text="Explore More"
-            className="w-[35%]"
-            additionalStyles={undefined}
-          />
+          <Button text="Explore More" className="w-[35%]" additionalStyles={undefined} />
         </div>
 
         <div className="relative">
@@ -85,7 +126,6 @@ const GrandOpeningOfferSection = () => {
     </section>
   );
 };
-
 
 const Resortpage = () => {
   return (
