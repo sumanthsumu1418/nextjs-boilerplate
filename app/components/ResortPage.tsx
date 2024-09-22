@@ -88,7 +88,7 @@ const GrandOpeningOfferSection = () => {
   );
 };
 
-const Accommodation = () => {
+export const Accommodation = () => {
   return (
     <section className="bg-[#F5F0E5] py-12 px-[6%]">
       <div className="grid md:grid-cols-2 gap-12">
