@@ -12,7 +12,7 @@ const Footer = () => {
   return (
     <footer className="bg-white py-[2%] w-full px-[5%]">
       <div className="container mx-auto px-4">
-        {/* Social Media Icons */}
+        
         <div className="flex flex-row items-center justify-between">
           <div className="flex justify-center space-x-4 ">
             <a href="#" aria-label="Facebook">
@@ -50,7 +50,7 @@ const Footer = () => {
         </div>
         <hr className="my-6" />
 
-        {/* Footer Links */}
+        
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
           <div>
             <h4 className="font-bold mb-4">More Information</h4>
@@ -147,7 +147,7 @@ const Footer = () => {
           </div>
         </div>
         <hr className="my-6" />
-        {/* Footer Bottom */}
+       
         <div className="mt-8 flex flex-row justify-between  ">
           <p>Copyright © 2023 - Hidden Oasis Resort. All rights reserved</p>
           <div className="flex justify-center ">
@@ -158,7 +158,7 @@ const Footer = () => {
               <option value="ka">Kannada</option>
               <option value="sp">Spanish</option>
               <option value="italics">🇮🇹</option>
-              {/* Add more language options as needed */}
+             
             </select>
           </div>
         </div>

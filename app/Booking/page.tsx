@@ -36,11 +36,14 @@ const Page: React.FC = () => {
   
   const HeroSection: React.FC = () => {
     return (
-      <header className="relative w-full  h-80">
-        <img
-          src="/resort1.jpeg"
+      <header className="relative w-full h-80">
+        <Image
+          src="/resort1.webp"
           alt="Resort Header"
-          className="w-full h-full object-cover"
+          className="w-full w-1000 h-full object-cover"
+          width={200}
+          height={100}
+          loading="lazy"
         />
         <div className="absolute px-[6%] inset-0 bg-black bg-opacity-60 text-white flex flex-col justify-center">
           <h1 className="text-3xl font-semibold">Hidden Oasis.</h1>
@@ -99,7 +102,7 @@ const Page: React.FC = () => {
           </div>
         </form>
   
-        {/* Filter Options */}
+      
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 my-6 w-full">
           <div>
             <label
@@ -161,32 +164,32 @@ const Page: React.FC = () => {
       {
         title: "1 King Bed Junior Suite",
         price: "$3,445",
-        image: "/room1.jpeg",
+        image: "/room1.webp",
       },
       {
         title: "1 King Bed Senior Suite",
         price: "$3,445",
-        image: "/room2.jpeg",
+        image: "/room2.webp",
       },
       {
         title: "1 King Bed Master Suite",
         price: "$3,445",
-        image: "/room3.jpeg",
+        image: "/room3.webp",
       },
       {
         title: "1 King Bed Junior Suite",
         price: "$3,445",
-        image: "/room4.jpeg",
+        image: "/room4.webp",
       },
     ];
   
     const navigateToRoomDetails = (room: Room) => {
-      // Logic to navigate to room details (for example, using router.push('/room-details'))
+      
       console.log("Navigating to room details for:",<RoomDetail />);
     };
   
     const handleBookNow = (room: Room, e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
-      // Logic to handle booking
+      
       console.log("Booking room:",<RoomDetail /> );
     };
   
@@ -205,6 +208,7 @@ const Page: React.FC = () => {
                           alt={room.title}
                           width={100}
                           height={100}
+                          loading="lazy"
                           className="w-2/4 h-[200px] rounded-lg object-cover"
                         />
                         <div className="ml-6 flex flex-col justify-between">
@@ -212,7 +216,7 @@ const Page: React.FC = () => {
                           <p className="text-gray-600">From {room.price}</p>
                           <p className="text-[17px] text-gray-500">Average Per Night</p>
                           <button
-                            onClick={(e) => handleBookNow(room, e)} // Prevents navigation when clicking "Book Now"
+                            onClick={(e) => handleBookNow(room, e)} 
                             className="mt-4 bg-green-600 text-white py-2 px-4 rounded-md"
                           >
                             Book Now

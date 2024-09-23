@@ -1,35 +1,33 @@
 /* eslint-disable react/no-unescaped-entities */
 import React from "react";
 import Image from "next/image";
-import king1 from '../components/images/king1.jpeg'
 
-// Main Room Component
 const RoomDetail = () => {
   const interestedRooms = [
     {
       title: "1 King Bed Junior Suite",
-      src: "/resort1.jpeg", // Replace with actual image URL
+      src: "/king1.webp",
     },
     {
       title: "1 King Bed Junior Suite Oceanfront View",
-      src: "/resort1.jpeg", // Replace with actual image URL
+      src: "/resort2.webp",
     },
     {
       title: "1 King 2 Double Beds 2 Bedroom Suite",
-      src: "/resort1.jpeg", // Replace with actual image URL
+      src: "/resort3.webp",
     },
   ];
 
   return (
     <div className="bg-gray-100">
-      {/* Main Image and Description */}
       <div className="p-[6%] max-w-full h-[600px] items-center overflow-hidden">
         <Image
-          src="/king1.jpeg" // Replace with actual image URL
+          src="/king1.webp"
           alt="king1"
-          width={1200} // Aspect ratio is based on these values
-          height={500} // Keeping the same aspect ratio (1:1)
-          layout="intrinsic" // Use intrinsic for controlling both width and height
+          width={1200}
+          height={500}
+          loading="lazy"
+          layout="intrinsic"
           className="w-full h-auto object-cover rounded-lg"
         />
 
@@ -39,12 +37,10 @@ const RoomDetail = () => {
             feel the beauty of your beachfront room. Designed in traditional
             Vietnamese style...
             <br /> <br />
-            {/* Add more room details here as needed */}
           </p>
         </div>
       </div>
 
-      {/* Room Features */}
       <div className="mt-8 max-w-screen-lg mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
         <div className="flex items-center">
           <span className="mr-4">🏨</span>
@@ -65,16 +61,27 @@ const RoomDetail = () => {
       </div>
 
       {/* Benefits Section */}
+      {/* Benefits Section */}
       <div className="mt-8 max-w-screen-lg mx-auto bg-white p-6 rounded-lg shadow-lg bg-gray-300">
-        <h3 className="text-xl font-semibold text-green-800 mb-4 ">Benefits</h3>
+        <h3 className="text-xl font-semibold text-green-800 mb-4">Benefits</h3>
         <ul className="list-disc pl-5 text-gray-700">
           <li>Free breakfast for children under 12.</li>
           <li>Unlimited access to the spa and pool.</li>
           <li>Complimentary Wi-Fi.</li>
+          <li>
+            Early check-in and late check-out options (subject to availability).
+          </li>
+          <li>Free airport shuttle service.</li>
+          <li>Complimentary parking for guests.</li>
+          <li>Welcome drink upon arrival.</li>
+          <li>Access to the fitness center and yoga classes.</li>
+          <li>Kids' club and entertainment activities.</li>
+          <li>Exclusive discounts on resort activities and excursions.</li>
           {/* Add more benefits as needed */}
         </ul>
       </div>
 
+      {/* Amenities Section */}
       {/* Amenities Section */}
       <div className="mt-8 max-w-screen-lg mx-auto bg-white p-6 rounded-lg shadow-lg bg-gray-300">
         <h3 className="text-xl font-semibold text-green-800 mb-4">Amenities</h3>
@@ -83,6 +90,18 @@ const RoomDetail = () => {
           <p>Private pool</p>
           <p>Free breakfast</p>
           <p>Complimentary Wi-Fi</p>
+          <p>On-site restaurants and bars</p>
+          <p>24/7 room service</p>
+          <p>Luxury spa treatments</p>
+          <p>Fitness center</p>
+          <p>Air conditioning</p>
+          <p>Flat-screen TV with satellite channels</p>
+          <p>Mini-bar and coffee maker</p>
+          <p>Private balcony or terrace</p>
+          <p>Concierge services</p>
+          <p>Daily housekeeping</p>
+          <p>Beach access with cabana service</p>
+          <p>Pet-friendly rooms (on request)</p>
           {/* Add more amenities */}
         </div>
         <div className="mt-6 text-center">
@@ -93,7 +112,7 @@ const RoomDetail = () => {
       </div>
 
       {/* You Might Be Interested Section */}
-      <div className="mt-12 w-full px-[5%]">
+      <div className="my-12 w-full px-[5%]">
         <h3 className="text-xl font-semibold text-center text-green-800 mb-6">
           You Might Be Interested
         </h3>
@@ -108,6 +127,7 @@ const RoomDetail = () => {
                 alt={room.title}
                 width={100}
                 height={100}
+                loading="lazy"
                 layout="responsive"
                 className="w-full h-full object-cover"
               />

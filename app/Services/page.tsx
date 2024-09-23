@@ -1,8 +1,5 @@
 import React from "react";
 import Image from "next/image";
-import Resort1 from '../components/images/resort1.jpeg'
-import Resort2 from '../components/images/resort2.jpeg'
-import Resort4 from '../components/images/resort4.jpeg'
 const Services = () => {
   const services = [
     {
@@ -10,21 +7,21 @@ const Services = () => {
       description:
         "Hidden Oasis resort is the perfect location for weddings and events. The resort offers a variety of event spaces, from intimate beachfront ceremonies to grand ballroom receptions. The professional staff provides personalized service to every detail, ensuring a memorable and stress-free experience for all guests.",
       imageUrl:
-      Resort1, // Replace with your image URL
+      "/resort1.webp", // Replace with your image URL
     },
     {
       title: "Dining",
       description:
         "Hidden Oasis resort offers a variety of dining options from beachfront cafes to fine dining restaurants with both local and international cuisine. The restaurants offer breathtaking views of natural beauty, creating a serene atmosphere for all guests.",
       imageUrl:
-      Resort4, // Replace with your image URL
+     "/resort4.webp", // Replace with your image URL
     },
     {
       title: "Beauty & Wellness",
       description:
         "Hidden Oasis offers a wide array of spa and wellness experiences for guests. The resort has a variety of treatments, from traditional massages to aromatherapy, all designed to restore and energize the mind and body.",
       imageUrl:
-      Resort2, // Replace with your image URL
+      "/resort2.webp", // Replace with your image URL
     },
   ];
 
@@ -39,6 +36,7 @@ const Services = () => {
             <Image
               src={service.imageUrl}
               alt={service.title}
+              loading="lazy"
               className="w-full h-56 object-cover mb-4 rounded-md"
               width={500} // Set the width for Image component
               height={350} // Set the height for Image component

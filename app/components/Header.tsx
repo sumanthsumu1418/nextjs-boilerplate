@@ -1,13 +1,11 @@
 "use client";
 
 import Image from "next/image";
-import logo from "./images/logo.png";
-import menu from "./images/menu.png";
 import Link from "next/link";
-import { usePathname } from "next/navigation"; // Correct hook for App Router
+import { usePathname } from "next/navigation"; 
 
 const Header = () => {
-  const pathname = usePathname(); // Get the current path
+  const pathname = usePathname(); 
   const navLinks = [
     { href: "/Resort", label: "The Resort" },
     { href: "/Accomodation", label: "Accommodations" },
@@ -20,23 +18,25 @@ const Header = () => {
         <div className="container mt-[3%] flex justify-between items-center">
           <div className="">
             <Image
-              src={menu}
+              src="/menu.webp"
               alt="hamburger menu icon"
               className="w-8 h-8"
               width={32}
               height={32}
+              loading="lazy"
             />
           </div>
 
-          {/* Logo */}
+         
           <div className="flex  ml-[12%] items-center space-x-2">
             <Link href={"/"}>
               <Image
-                src={logo}
+                src="/logo.webp"
                 alt="Hidden Oasis Logo"
                 className="w-auto h-auto"
                 width={200}
                 height={100}
+                loading="lazy"
               />
             </Link>
           </div>
@@ -53,7 +53,7 @@ const Header = () => {
           </div>
         </div>
 
-        {/* Nav Links */}
+        
         <div className="flex flex-row justify-center items-center md:flex space-x-8">
           {navLinks.map((link) =>
             link.isButton ? (

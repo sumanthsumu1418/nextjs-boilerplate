@@ -3,21 +3,21 @@
 /* eslint-disable react/no-unescaped-entities */
 import React, { useEffect, useRef, useState } from "react";
 import Image from "next/image";
-import Resort from "./images/resort.jpeg";
-import Resort1 from "./images/resort1.jpeg";
-import Resort2 from "./images/resort2.jpeg";
+import Resort from "./images/resort (1).webp";
+import Resort1 from "./images/resort1 (1).webp";
+import Resort2 from "./images/resort2 (1).webp";
 import Button from "./Button";
 import Accommodations from "../Accomodation/page";
 
 const LuxuryLivingSection = () => {
   const videoRef = useRef(null);
-  const [isMuted, setIsMuted] = useState(true); // State to handle mute/unmute
+  const [isMuted, setIsMuted] = useState(true); 
 
   useEffect(() => {
     const playVideo = () => {
       if (videoRef.current) {
         //@ts-expect-error
-        videoRef.current.muted = isMuted; // Set initial mute state
+        videoRef.current.muted = isMuted; 
         //@ts-expect-error
         const playPromise = videoRef.current.play();
 
@@ -35,7 +35,7 @@ const LuxuryLivingSection = () => {
     };
 
     playVideo();
-  }, [isMuted]); // Re-run if mute state changes
+  }, [isMuted]); 
 
   const toggleMute = () => {
     setIsMuted(!isMuted);
@@ -49,14 +49,13 @@ const LuxuryLivingSection = () => {
           className="w-full h-auto rounded-lg shadow-lg"
           loop
           playsInline
-          muted={isMuted} // Ensure the video is muted by default
-          autoPlay // Enable autoplay by default
+          muted={isMuted}
+          autoPlay 
           src="/videos/video.mp4"
         >
           Your browser does not support the video tag.
         </video>
         
-        {/* Transparent Mute/Unmute Button */}
         <button
           onClick={toggleMute}
           className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-black bg-opacity-50 text-white px-4 py-2 rounded-full"
@@ -67,17 +66,19 @@ const LuxuryLivingSection = () => {
       <div className="grid md:grid-cols-2 gap-8 mt-8">
         <div className="relative">
           <Image
-            src={Resort}
+            src="/resort.webp"
             alt="Luxury Living"
             width={800}
             height={600}
+            loading="lazy"
             className="w-full h-auto object-cover"
           />
           <Image
-            src={Resort1}
+            src="/resort1.webp"
             alt="Small Image 1"
             width={112}
             height={112}
+            loading="lazy"
             className="absolute bottom-0 right-0 w-28 h-28 object-cover border-4 border-white"
           />
         </div>
@@ -118,10 +119,11 @@ const GrandOpeningOfferSection = () => {
 
         <div className="relative">
           <Image
-            src={Resort2}
+            src="/resort2.webp"
             alt="Grand Opening"
             width={800}
             height={600}
+            loading="lazy"
             className="w-full h-auto object-cover"
           />
         </div>

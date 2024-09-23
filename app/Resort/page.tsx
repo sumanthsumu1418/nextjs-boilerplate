@@ -1,37 +1,33 @@
 import React from 'react';
 import Image from 'next/image';
-import R1 from "../components/images/R1.jpeg";
-import R2 from "../components/images/R2.jpeg";
-import R3 from "../components/images/R3.jpeg";
-import R4 from "../components/images/R4.jpeg";
 
 const Resort = () => {
   const diningOptions = [
     {
       title: 'The Restaurant and Terrace',
       description: "Hidden Oasis's Restaurant highlights the best of Vietnamese cuisine, featuring all-day dining with fresh, seasonal produce and local seafood.",
-      src: R1,
+      src: "/R1.webp",
       cuisine: 'Vietnamese Food',
       hours: 'Opening Hours: 2:00 pm - 10:00 pm',
     },
     {
       title: 'Destination Dining',
       description: "Hidden Oasis's Restaurant highlights the best of Vietnamese cuisine, featuring all-day dining with freshly seasoned produce and local seafood.",
-      src: R2,
+      src: "/R2.webp",
       cuisine: 'Vietnamese Food',
       hours: 'Opening Hours: 2:00 pm - 10:00 pm',
     },
     {
       title: 'Floating Breakfast',
       description: "Hidden Oasis's Restaurant highlights the best of Vietnamese cuisine, featuring all-day dining with freshly seasoned produce and local seafood.",
-      src: R3,
+      src: "/R3.webp",
       cuisine: 'Vietnamese Food',
       hours: 'Opening Hours: 2:00 pm - 10:00 pm',
     },
     {
       title: 'Pool Side',
       description: "Hidden Oasis's Restaurant highlights the best of Vietnamese cuisine, featuring all-day dining with freshly seasoned produce and local seafood.",
-      src: R4,
+      src: "/R4.webp",
       cuisine: 'Vietnamese Food',
       hours: 'Opening Hours: 2:00 pm - 10:00 pm',
     },
@@ -39,7 +35,7 @@ const Resort = () => {
 
   return (
     <div className="py-12 bg-[#f9f4ec]">
-      {/* Heading Section */}
+      
       <div className="text-center max-w-screen-lg mx-auto mb-12">
         <h2 className="text-4xl font-bold text-green-800">
           Discover Local & World Cuisines At Hidden Oasis.
@@ -49,7 +45,7 @@ const Resort = () => {
         </p>
       </div>
 
-      {/* Cards Section */}
+      
       <div className="max-w-screen-lg mx-auto space-y-12">
         {diningOptions.map((option, index) => (
           <div
@@ -61,6 +57,7 @@ const Resort = () => {
               alt={option.title}
               width={400}
               height={200}
+              loading="lazy"
               className="w-[500px] h-[300px] object-cover mx-auto md:mx-0"
             />
             <div className="p-6 flex-1">

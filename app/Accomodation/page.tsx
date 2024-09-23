@@ -1,19 +1,18 @@
 import React from "react";
 import Image from "next/image";
-import Resort3 from '../components/images/resort3.jpeg'
-import Resort4 from '../components/images/resort4.jpeg'
 import Button from "../components/Button";
 const Accommodation = () => {
   return (
     <section className="bg-[#F5F0E5] py-12 px-[6%]">
       <div className="grid md:grid-cols-2 gap-12">
-        {/* Left Section: Style and Large Image */}
+       
         <div className="flex flex-col items-center">
           <Image
-            src={Resort3} // Replace with your large image path
+            src="/resort3.webp" 
             alt="Luxury Living"
             width={500}
             height={600}
+            loading="lazy"
             className="w-full h-auto object-cover"
           />
           <h2 className="text-3xl font-serif font-semibold text-green-800 mt-6">
@@ -24,19 +23,20 @@ const Accommodation = () => {
           </p>
         </div>
 
-        {/* Right Section: Accommodations */}
+        
         <div>
           <h2 className="text-3xl font-serif font-semibold text-green-800 mb-6">
             Accommodations & Suite.
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-            {/* First Image Card */}
+            
             <div className="relative">
               <Image
-                src={Resort4} // Replace with your right image
+                src="/resort4.webp" 
                 alt="Accommodation 1"
                 width={400}
                 height={300}
+                loading="lazy"
                 className="w-full h-auto object-cover"
               />
               <p className="mt-2 text-sm font-semibold text-gray-700">
@@ -55,12 +55,13 @@ const Accommodation = () => {
               />
             </div>
 
-            {/* Second Image Card */}
+           
             <div className="relative">
               <Image
-                src={Resort3} // Replace with another image
+                src="/resort3.webp" 
                 alt="Accommodation 2"
                 width={400}
+                loading="lazy"
                 height={300}
                 className="w-full h-auto object-cover"
               />

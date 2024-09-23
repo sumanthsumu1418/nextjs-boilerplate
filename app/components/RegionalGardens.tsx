@@ -1,22 +1,22 @@
 import React from "react";
 import Image from "next/image";
-import rg1 from "./images/rg1.jpeg";
-import rg2 from "./images/rg2.jpeg";
-import rg3 from "./images/rg3.jpeg";
+import rg1 from "./images/rg1.webp";
+import rg2 from "./images/rg2.webp";
+import rg3 from "./images/rg3.webp";
 const RegionalHighlights = () => {
   const highlights = [
     {
       title: "Grape Garden",
-      imageUrl:rg1 , // Replace with actual image URL
+      imageUrl:"/rg1.webp" ,
     },
     {
       title: "Vinh Hy Bay",
-      imageUrl:rg3, // Replace with actual image URL
-      isCenter: true, // Mark the center image
+      imageUrl:"/rg3.webp",
+      isCenter: true, 
     },
     {
       title: "Po Klong Garai Temple",
-      imageUrl: rg2, // Replace with actual image URL
+      imageUrl: "/rg2.webp", 
     },
   ];
 
@@ -50,6 +50,7 @@ const RegionalHighlights = () => {
                 alt={highlight.title}
                 fill
                 objectFit="cover"
+                loading="lazy"
                 className="rounded-lg transition-transform duration-500 transform group-hover:scale-[2]"
               />
             </div>
