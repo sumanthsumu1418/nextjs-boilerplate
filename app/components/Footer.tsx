@@ -46,7 +46,7 @@ const Footer = () => {
               />
             </a>
           </div>
-          <button className="border-2 border-black border-solid px-6 py-3 rounded-sm">BEST PRICE RECOMMENDATIONS</button>
+          {/* <button className="border-2 border-black border-solid px-6 py-3 rounded-sm">BEST PRICE RECOMMENDATIONS</button> */}
         </div>
         <hr className="my-6" />
 
